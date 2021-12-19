@@ -27,7 +27,7 @@ class NodesMinHeight {
         for (let i = 0; i < this.numberOfNodes; i++) {
 
             if (this.adjacencyList[i].size === 1) {
-                queue.push(i);//Initialize queue wth all leaf nodes.               
+                queue.push(i);//Initialize queue with all leaf nodes.               
             }
         }
 
@@ -38,7 +38,7 @@ class NodesMinHeight {
             this.numberOfNodes -= size;
 
 
-            //In each round: remove leaf nodes, then add the newly formed leaf nodes that result from the remova.
+            //In each round: remove leaf nodes, then add the newly formed leaf nodes that result from the removal.
             while (size-- > 0) {
 
                 let current = queue.shift();
