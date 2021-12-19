@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Solution {
+public class Solution {
 
     Set<Integer>[] adjacencyList;
 
@@ -22,7 +22,7 @@ class Solution {
         Queue<Integer> queue = new LinkedList<>();
         for (int i = 0; i < numberOfNodes; i++) {
             if (adjacencyList[i].size() == 1) {
-                queue.add(i);//Initialize queue wth all leaf nodes.
+                queue.add(i);//Initialize queue with all leaf nodes.
             }
         }
 
@@ -31,7 +31,7 @@ class Solution {
             int size = queue.size();
             numberOfNodes -= size;
 
-            //In each round: remove leaf nodes, then add the newly formed leaf nodes that result from the remova.
+            //In each round: remove leaf nodes, then add the newly formed leaf nodes that result from the removal.
             while (size-- > 0) {
 
                 int current = queue.poll();
